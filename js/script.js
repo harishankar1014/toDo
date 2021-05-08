@@ -8,12 +8,14 @@ function validate(redirect)
         // var userText = document.getElementById("userText");
         // userText.innerHTML = "Incorrect User name";
         userName.value = "";
+        password.value="";
     }
     if(password.value!= "12345")
     {
         console.log(password.value);
         // var passwordText = document.getElementById("passwordText");
         // passwordText.innerHTML = "Incorrect password";
+        userName.value = "";
         password.value="";
     }
     return redirect(userName.value,password.value);
@@ -23,12 +25,11 @@ function redirect(userName,password)
 {
     if(userName=="admin"&&password=="12345")
     {
-        console.log(false);
         return true;
     }
     else
     {
-        console.log(true);
+        alert("Incorrect user name or password");
         return false;
     }
 }

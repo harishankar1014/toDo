@@ -44,7 +44,7 @@ function action(i)
                 console.log("maximum count reached");
                 var d=document.querySelectorAll("input");
                 $("input").attr("disabled","true");
-                dailyLimit(count).then(alert("daily tasks are completed"));
+                dailyLimit(count).then(alert("5 tasks are completed!"));
         }
 
 function dailyLimit(count)
